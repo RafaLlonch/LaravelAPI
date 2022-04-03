@@ -6,6 +6,7 @@ use App\Http\Controllers\passportAuthController;
 use App\Http\Controllers\PlayersController;
 use App\Http\Controllers\GamesController;
 use App\Http\Controllers\RankingController;
+use App\Http\Middleware\EnsureTokenIsValid;
 
 
 /*
@@ -28,13 +29,13 @@ Route::post('login',[passportAuthController::class,'loginUser']);
 //add this middleware to ensure that every request is authenticated
 Route::middleware('auth:api')->group(function(){   
 
-    Route::put('players/{id}', [PlayersController::class, 'edit']);
+    Route::put('players/{id}', [PlayersController::class, 'edit'])->middleware([EnsureTokenIsValid::class]);
     //Modifica el nombre de un jugador
 
     Route::post('players/{id}/games', [GamesController::class, 'create']);
     //Un jugador realiza una tirada
 
-    Route::delete('players/{id}/games', [GamesController::class, 'destroy']);
+    Route::delete('players/{id}/games', [GamesController::class, 'destroy'])->middleware('admin');
     //Elimina las tiradas de un jugador
 
     Route::get('players', [PlayersController::class, 'index']);

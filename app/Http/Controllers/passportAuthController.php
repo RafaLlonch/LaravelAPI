@@ -24,6 +24,8 @@ class passportAuthController extends Controller
 
         if ($request->nickname == null){ $user->nickname = 'Anónimo';}
         else {$user->nickname = $request->nickname;}
+        if ($request->role == null){ $user->role = 'user';}
+        else {$user->role = $request->role;}
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
 
