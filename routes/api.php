@@ -29,7 +29,7 @@ Route::post('login',[passportAuthController::class,'loginUser']);
 //add this middleware to ensure that every request is authenticated
 Route::middleware('auth:api')->group(function(){   
 
-    Route::put('players/{id}', [PlayersController::class, 'edit'])->middleware([EnsureTokenIsValid::class]);
+    Route::put('players/{id}', [PlayersController::class, 'edit']);
     //Modifica el nombre de un jugador
 
     Route::post('players/{id}/games', [GamesController::class, 'create']);

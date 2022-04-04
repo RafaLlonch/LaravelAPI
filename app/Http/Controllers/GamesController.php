@@ -11,10 +11,10 @@ class GamesController extends Controller
     //Un jugador realiza una tirada
     public function create($id){
 
-        if (!auth()->user()){
+        if (auth()->user()->id != $id){
             return response()->json('No estas autorizado');
         }
-
+        
         $user = User::find($id);
 
         $jugada = new Game();

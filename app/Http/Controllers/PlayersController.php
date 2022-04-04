@@ -11,6 +11,10 @@ class PlayersController extends Controller
     //Modifica el nombre de un jugador
     public function edit(Request $request, $id){
 
+        if (auth()->user()->id != $id){
+            return response()->json('No estas autorizado');
+        }
+        
         $user = User::find($id);
         
         $user->nickname = $request->nickname;
