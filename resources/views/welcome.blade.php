@@ -77,7 +77,7 @@
                 <td scope="row">Elimina las tiradas de un jugador</td>
                 <td>DELETE</td>
                 <td>dados-api.tk/api/players/id/games</td>
-                <td>json de la tirada</td>
+                <td>mensaje: partidas eliminadas</td>
               </tr>
               <tr>
                 <td scope="row">Listado de jugadores con el % de éxito</td>
