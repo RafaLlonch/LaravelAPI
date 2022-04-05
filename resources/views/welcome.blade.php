@@ -15,8 +15,8 @@
                 Para registrar un jugador es imprescindible introducir el mail y un password de mínimo 8 
                 carácteres.
                 Cuando se registra un usuario sin nickname se le asigna el 
-                nombre Ánonimo y se le asigna el rol de user, con el que puede hacerlo todo menos borrar
-                las jugadas de un jugador, que solo lo puede hacer un admin.
+                nickname Ánonimo y se le asigna el rol de user, con el que puede hacerlo todo menos borrar
+                las jugadas de un jugador, que solo puede hacerlo un admin.
             </p>
             <p>
                 Para asignar el rol de admin se puede hacer desde postman o desde phpMyAdmin.
@@ -28,7 +28,7 @@
             </p>
             <p>
                 He creado los tests de acceso a la aplicación en el archivo tests/Feature/AuthTest. En ellos 
-                de comprueban el registro, el login y los posibles casos de error de registro y de inicio de 
+                se comprueba el registro, el login y los posibles casos de error de registro y de inicio de 
                 sesión.
             </p>
             <p>
