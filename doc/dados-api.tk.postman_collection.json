@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "70e1bda1-91f3-40c4-bdf1-ead204355cde",
+		"name": "dados-api.tk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"strictSSL": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "root",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "Rafa",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rafa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rafa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/login",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar nombre jugador",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMThkNzQ1MGFhYjAxMzc2YjVjNmUwYmNmYzQ5ZTlmMjg2OWI2ODVhZWQ0MzFmOWM4NzU5NmFkODA4MzgzZmJjN2JiN2E3MWE0YTJlNDYzMzAiLCJpYXQiOjE2NDkxNTkzNzYuOTg4MDQ4LCJuYmYiOjE2NDkxNTkzNzYuOTg4MDUyLCJleHAiOjE2ODA2OTUzNzYuOTI5ODQ5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pr6SMD_BxOFiUoQLC01jRiCsiA4Ph5PQM6Wyay4edScMfrK97jF48NTwzXENsLyb-C46k-YMxy9EcBN5oey8p4HJ3Tz9SINZm7LV-TxA926LnIJ6XbwE9PVH3YWkiL7LpCDM5xffJ_qiIve7eYbbG7SwkjFiP1t3BuV-rMi1Ibcwc1wpHRP_iEafahwGdZQmlqna-fjBq58_9XUxcI83IOgozGfsnp5aTZxy3eX05pKGLzEcqeVDsC7s49Ag2tWSgNtPA1fjjBx2Oom6UkmdzGIjhS1AO_1phppvSuyttdDILq70qaCoIB-xtJ2LGbKlhhujl4PxKNRxLNDUo-6U9IGhYvgasECl5CrX238Jgs3LZyUy51zZzjObffy-xJ0qDnSzYSuNzq-thQlpZdPnC4ff9CYhCeN4MbSHNqWskYk-hmfWkZH54UsDdxIPZ5T8WgfQXz3N0UsMWnCPvGcoaQ8aP1ItT-rNHiKEKiZaR_98GTt2xiJmM8WZAxCdiKpXLm6jHkkBxjH5faG5AUPqSYCApXtdwZcea95euWweRw_8sZFNIA-FUSSLymrR3c9ob_zu4-CfgKvAEfvGI67Rm5YOTDfLw4GJzDw-SDYB4pfBskI-3tjEwdPRnTzUQWPYUidnPNAC-mcWBdlyis7JUR1Z7eAYKV-UZAWjW1I0jIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "RAFA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players/1",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizar una tirada",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMThkNzQ1MGFhYjAxMzc2YjVjNmUwYmNmYzQ5ZTlmMjg2OWI2ODVhZWQ0MzFmOWM4NzU5NmFkODA4MzgzZmJjN2JiN2E3MWE0YTJlNDYzMzAiLCJpYXQiOjE2NDkxNTkzNzYuOTg4MDQ4LCJuYmYiOjE2NDkxNTkzNzYuOTg4MDUyLCJleHAiOjE2ODA2OTUzNzYuOTI5ODQ5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pr6SMD_BxOFiUoQLC01jRiCsiA4Ph5PQM6Wyay4edScMfrK97jF48NTwzXENsLyb-C46k-YMxy9EcBN5oey8p4HJ3Tz9SINZm7LV-TxA926LnIJ6XbwE9PVH3YWkiL7LpCDM5xffJ_qiIve7eYbbG7SwkjFiP1t3BuV-rMi1Ibcwc1wpHRP_iEafahwGdZQmlqna-fjBq58_9XUxcI83IOgozGfsnp5aTZxy3eX05pKGLzEcqeVDsC7s49Ag2tWSgNtPA1fjjBx2Oom6UkmdzGIjhS1AO_1phppvSuyttdDILq70qaCoIB-xtJ2LGbKlhhujl4PxKNRxLNDUo-6U9IGhYvgasECl5CrX238Jgs3LZyUy51zZzjObffy-xJ0qDnSzYSuNzq-thQlpZdPnC4ff9CYhCeN4MbSHNqWskYk-hmfWkZH54UsDdxIPZ5T8WgfQXz3N0UsMWnCPvGcoaQ8aP1ItT-rNHiKEKiZaR_98GTt2xiJmM8WZAxCdiKpXLm6jHkkBxjH5faG5AUPqSYCApXtdwZcea95euWweRw_8sZFNIA-FUSSLymrR3c9ob_zu4-CfgKvAEfvGI67Rm5YOTDfLw4GJzDw-SDYB4pfBskI-3tjEwdPRnTzUQWPYUidnPNAC-mcWBdlyis7JUR1Z7eAYKV-UZAWjW1I0jIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "RAFA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players/1/games",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tiradas de un jugador",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMThkNzQ1MGFhYjAxMzc2YjVjNmUwYmNmYzQ5ZTlmMjg2OWI2ODVhZWQ0MzFmOWM4NzU5NmFkODA4MzgzZmJjN2JiN2E3MWE0YTJlNDYzMzAiLCJpYXQiOjE2NDkxNTkzNzYuOTg4MDQ4LCJuYmYiOjE2NDkxNTkzNzYuOTg4MDUyLCJleHAiOjE2ODA2OTUzNzYuOTI5ODQ5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pr6SMD_BxOFiUoQLC01jRiCsiA4Ph5PQM6Wyay4edScMfrK97jF48NTwzXENsLyb-C46k-YMxy9EcBN5oey8p4HJ3Tz9SINZm7LV-TxA926LnIJ6XbwE9PVH3YWkiL7LpCDM5xffJ_qiIve7eYbbG7SwkjFiP1t3BuV-rMi1Ibcwc1wpHRP_iEafahwGdZQmlqna-fjBq58_9XUxcI83IOgozGfsnp5aTZxy3eX05pKGLzEcqeVDsC7s49Ag2tWSgNtPA1fjjBx2Oom6UkmdzGIjhS1AO_1phppvSuyttdDILq70qaCoIB-xtJ2LGbKlhhujl4PxKNRxLNDUo-6U9IGhYvgasECl5CrX238Jgs3LZyUy51zZzjObffy-xJ0qDnSzYSuNzq-thQlpZdPnC4ff9CYhCeN4MbSHNqWskYk-hmfWkZH54UsDdxIPZ5T8WgfQXz3N0UsMWnCPvGcoaQ8aP1ItT-rNHiKEKiZaR_98GTt2xiJmM8WZAxCdiKpXLm6jHkkBxjH5faG5AUPqSYCApXtdwZcea95euWweRw_8sZFNIA-FUSSLymrR3c9ob_zu4-CfgKvAEfvGI67Rm5YOTDfLw4GJzDw-SDYB4pfBskI-3tjEwdPRnTzUQWPYUidnPNAC-mcWBdlyis7JUR1Z7eAYKV-UZAWjW1I0jIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "RAFA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players/1/games",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado de jugadores y éxito",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMThkNzQ1MGFhYjAxMzc2YjVjNmUwYmNmYzQ5ZTlmMjg2OWI2ODVhZWQ0MzFmOWM4NzU5NmFkODA4MzgzZmJjN2JiN2E3MWE0YTJlNDYzMzAiLCJpYXQiOjE2NDkxNTkzNzYuOTg4MDQ4LCJuYmYiOjE2NDkxNTkzNzYuOTg4MDUyLCJleHAiOjE2ODA2OTUzNzYuOTI5ODQ5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pr6SMD_BxOFiUoQLC01jRiCsiA4Ph5PQM6Wyay4edScMfrK97jF48NTwzXENsLyb-C46k-YMxy9EcBN5oey8p4HJ3Tz9SINZm7LV-TxA926LnIJ6XbwE9PVH3YWkiL7LpCDM5xffJ_qiIve7eYbbG7SwkjFiP1t3BuV-rMi1Ibcwc1wpHRP_iEafahwGdZQmlqna-fjBq58_9XUxcI83IOgozGfsnp5aTZxy3eX05pKGLzEcqeVDsC7s49Ag2tWSgNtPA1fjjBx2Oom6UkmdzGIjhS1AO_1phppvSuyttdDILq70qaCoIB-xtJ2LGbKlhhujl4PxKNRxLNDUo-6U9IGhYvgasECl5CrX238Jgs3LZyUy51zZzjObffy-xJ0qDnSzYSuNzq-thQlpZdPnC4ff9CYhCeN4MbSHNqWskYk-hmfWkZH54UsDdxIPZ5T8WgfQXz3N0UsMWnCPvGcoaQ8aP1ItT-rNHiKEKiZaR_98GTt2xiJmM8WZAxCdiKpXLm6jHkkBxjH5faG5AUPqSYCApXtdwZcea95euWweRw_8sZFNIA-FUSSLymrR3c9ob_zu4-CfgKvAEfvGI67Rm5YOTDfLw4GJzDw-SDYB4pfBskI-3tjEwdPRnTzUQWPYUidnPNAC-mcWBdlyis7JUR1Z7eAYKV-UZAWjW1I0jIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "RAFA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver tiradas de un jugador",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMThkNzQ1MGFhYjAxMzc2YjVjNmUwYmNmYzQ5ZTlmMjg2OWI2ODVhZWQ0MzFmOWM4NzU5NmFkODA4MzgzZmJjN2JiN2E3MWE0YTJlNDYzMzAiLCJpYXQiOjE2NDkxNTkzNzYuOTg4MDQ4LCJuYmYiOjE2NDkxNTkzNzYuOTg4MDUyLCJleHAiOjE2ODA2OTUzNzYuOTI5ODQ5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pr6SMD_BxOFiUoQLC01jRiCsiA4Ph5PQM6Wyay4edScMfrK97jF48NTwzXENsLyb-C46k-YMxy9EcBN5oey8p4HJ3Tz9SINZm7LV-TxA926LnIJ6XbwE9PVH3YWkiL7LpCDM5xffJ_qiIve7eYbbG7SwkjFiP1t3BuV-rMi1Ibcwc1wpHRP_iEafahwGdZQmlqna-fjBq58_9XUxcI83IOgozGfsnp5aTZxy3eX05pKGLzEcqeVDsC7s49Ag2tWSgNtPA1fjjBx2Oom6UkmdzGIjhS1AO_1phppvSuyttdDILq70qaCoIB-xtJ2LGbKlhhujl4PxKNRxLNDUo-6U9IGhYvgasECl5CrX238Jgs3LZyUy51zZzjObffy-xJ0qDnSzYSuNzq-thQlpZdPnC4ff9CYhCeN4MbSHNqWskYk-hmfWkZH54UsDdxIPZ5T8WgfQXz3N0UsMWnCPvGcoaQ8aP1ItT-rNHiKEKiZaR_98GTt2xiJmM8WZAxCdiKpXLm6jHkkBxjH5faG5AUPqSYCApXtdwZcea95euWweRw_8sZFNIA-FUSSLymrR3c9ob_zu4-CfgKvAEfvGI67Rm5YOTDfLw4GJzDw-SDYB4pfBskI-3tjEwdPRnTzUQWPYUidnPNAC-mcWBdlyis7JUR1Z7eAYKV-UZAWjW1I0jIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "RAFA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players/1/games",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ranking medio de jugadores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMThkNzQ1MGFhYjAxMzc2YjVjNmUwYmNmYzQ5ZTlmMjg2OWI2ODVhZWQ0MzFmOWM4NzU5NmFkODA4MzgzZmJjN2JiN2E3MWE0YTJlNDYzMzAiLCJpYXQiOjE2NDkxNTkzNzYuOTg4MDQ4LCJuYmYiOjE2NDkxNTkzNzYuOTg4MDUyLCJleHAiOjE2ODA2OTUzNzYuOTI5ODQ5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pr6SMD_BxOFiUoQLC01jRiCsiA4Ph5PQM6Wyay4edScMfrK97jF48NTwzXENsLyb-C46k-YMxy9EcBN5oey8p4HJ3Tz9SINZm7LV-TxA926LnIJ6XbwE9PVH3YWkiL7LpCDM5xffJ_qiIve7eYbbG7SwkjFiP1t3BuV-rMi1Ibcwc1wpHRP_iEafahwGdZQmlqna-fjBq58_9XUxcI83IOgozGfsnp5aTZxy3eX05pKGLzEcqeVDsC7s49Ag2tWSgNtPA1fjjBx2Oom6UkmdzGIjhS1AO_1phppvSuyttdDILq70qaCoIB-xtJ2LGbKlhhujl4PxKNRxLNDUo-6U9IGhYvgasECl5CrX238Jgs3LZyUy51zZzjObffy-xJ0qDnSzYSuNzq-thQlpZdPnC4ff9CYhCeN4MbSHNqWskYk-hmfWkZH54UsDdxIPZ5T8WgfQXz3N0UsMWnCPvGcoaQ8aP1ItT-rNHiKEKiZaR_98GTt2xiJmM8WZAxCdiKpXLm6jHkkBxjH5faG5AUPqSYCApXtdwZcea95euWweRw_8sZFNIA-FUSSLymrR3c9ob_zu4-CfgKvAEfvGI67Rm5YOTDfLw4GJzDw-SDYB4pfBskI-3tjEwdPRnTzUQWPYUidnPNAC-mcWBdlyis7JUR1Z7eAYKV-UZAWjW1I0jIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "RAFA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players/ranking",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peor jugador",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMThkNzQ1MGFhYjAxMzc2YjVjNmUwYmNmYzQ5ZTlmMjg2OWI2ODVhZWQ0MzFmOWM4NzU5NmFkODA4MzgzZmJjN2JiN2E3MWE0YTJlNDYzMzAiLCJpYXQiOjE2NDkxNTkzNzYuOTg4MDQ4LCJuYmYiOjE2NDkxNTkzNzYuOTg4MDUyLCJleHAiOjE2ODA2OTUzNzYuOTI5ODQ5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pr6SMD_BxOFiUoQLC01jRiCsiA4Ph5PQM6Wyay4edScMfrK97jF48NTwzXENsLyb-C46k-YMxy9EcBN5oey8p4HJ3Tz9SINZm7LV-TxA926LnIJ6XbwE9PVH3YWkiL7LpCDM5xffJ_qiIve7eYbbG7SwkjFiP1t3BuV-rMi1Ibcwc1wpHRP_iEafahwGdZQmlqna-fjBq58_9XUxcI83IOgozGfsnp5aTZxy3eX05pKGLzEcqeVDsC7s49Ag2tWSgNtPA1fjjBx2Oom6UkmdzGIjhS1AO_1phppvSuyttdDILq70qaCoIB-xtJ2LGbKlhhujl4PxKNRxLNDUo-6U9IGhYvgasECl5CrX238Jgs3LZyUy51zZzjObffy-xJ0qDnSzYSuNzq-thQlpZdPnC4ff9CYhCeN4MbSHNqWskYk-hmfWkZH54UsDdxIPZ5T8WgfQXz3N0UsMWnCPvGcoaQ8aP1ItT-rNHiKEKiZaR_98GTt2xiJmM8WZAxCdiKpXLm6jHkkBxjH5faG5AUPqSYCApXtdwZcea95euWweRw_8sZFNIA-FUSSLymrR3c9ob_zu4-CfgKvAEfvGI67Rm5YOTDfLw4GJzDw-SDYB4pfBskI-3tjEwdPRnTzUQWPYUidnPNAC-mcWBdlyis7JUR1Z7eAYKV-UZAWjW1I0jIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "RAFA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players/ranking/loser",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players",
+						"ranking",
+						"loser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mejor jugador",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMThkNzQ1MGFhYjAxMzc2YjVjNmUwYmNmYzQ5ZTlmMjg2OWI2ODVhZWQ0MzFmOWM4NzU5NmFkODA4MzgzZmJjN2JiN2E3MWE0YTJlNDYzMzAiLCJpYXQiOjE2NDkxNTkzNzYuOTg4MDQ4LCJuYmYiOjE2NDkxNTkzNzYuOTg4MDUyLCJleHAiOjE2ODA2OTUzNzYuOTI5ODQ5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Pr6SMD_BxOFiUoQLC01jRiCsiA4Ph5PQM6Wyay4edScMfrK97jF48NTwzXENsLyb-C46k-YMxy9EcBN5oey8p4HJ3Tz9SINZm7LV-TxA926LnIJ6XbwE9PVH3YWkiL7LpCDM5xffJ_qiIve7eYbbG7SwkjFiP1t3BuV-rMi1Ibcwc1wpHRP_iEafahwGdZQmlqna-fjBq58_9XUxcI83IOgozGfsnp5aTZxy3eX05pKGLzEcqeVDsC7s49Ag2tWSgNtPA1fjjBx2Oom6UkmdzGIjhS1AO_1phppvSuyttdDILq70qaCoIB-xtJ2LGbKlhhujl4PxKNRxLNDUo-6U9IGhYvgasECl5CrX238Jgs3LZyUy51zZzjObffy-xJ0qDnSzYSuNzq-thQlpZdPnC4ff9CYhCeN4MbSHNqWskYk-hmfWkZH54UsDdxIPZ5T8WgfQXz3N0UsMWnCPvGcoaQ8aP1ItT-rNHiKEKiZaR_98GTt2xiJmM8WZAxCdiKpXLm6jHkkBxjH5faG5AUPqSYCApXtdwZcea95euWweRw_8sZFNIA-FUSSLymrR3c9ob_zu4-CfgKvAEfvGI67Rm5YOTDfLw4GJzDw-SDYB4pfBskI-3tjEwdPRnTzUQWPYUidnPNAC-mcWBdlyis7JUR1Z7eAYKV-UZAWjW1I0jIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "RAFA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://dados-api.tk/api/players/ranking/winner",
+					"protocol": "http",
+					"host": [
+						"dados-api",
+						"tk"
+					],
+					"path": [
+						"api",
+						"players",
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

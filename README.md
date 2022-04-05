@@ -1,6 +1,6 @@
-## LaravelApi dados
+## dados-api.tk
 
-Cuando se registra un usuario sin nickname se le asigna el nombre Ánonimo y se le asigna el rol de user, con el que puede hacerlo todo menos borrar las jugadas de un jugador, que solo lo puede hacer un admin.
+Para registrar un jugador es imprescindible intrducir el mail y un password de mínimo 8 carácteres. Cuando se registra un usuario sin nickname se le asigna el nombre Ánonimo y se le asigna el rol de user, con el que puede hacerlo todo menos borrar las jugadas de un jugador, que solo lo puede hacer un admin.
 
 Para asignar el rol de admin se puede hacer desde postman o desde phpMyAdmin.
 
@@ -10,6 +10,6 @@ Una vez corridas las migraciones hay que correr el comando $php artisan passport
 
 He creado los tests de acceso a la aplicación en el archivo tests/Feature/AuthTest. En ellos de comprueban el registro, el login y los posibles casos de error de registro y de inicio de sesión.
 
-
+En la carpeta doc del proyecto se encuentra el modelo relacional de la base de datos y el json de la colección de pruebas de postman.
 
 
