@@ -16,7 +16,7 @@
           7, la partida es ganada, sino es perdida. Para poder jugar al juego tienes que estar registrado.
         </p>           
 			      <p>
-                Para registrar un jugador es imprescindible introducir el mail y un password de mínimo 8 
+                Para registrar un jugador es imprescindible introducir el email y un password de mínimo 8 
                 carácteres.
                 Cuando se registra un usuario sin nickname se le asigna el nickname Ánonimo y se le asigna 
                 el rol de user, con el que puede hacerlo todo menos borrar las jugadas de un jugador, que 
