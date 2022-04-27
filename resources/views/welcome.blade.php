@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Api dados</title>
+    <title>Api Rest dados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1 class="text-center mt-5">Api Rest Tirar dados</h1>
     <div class="container">
-	    <div class="mt-4">             
-			<p>
+	    <div class="mt-4">  
+        <p>
+          Este juego de dados se juega con dos dados. En caso que el resultado de la suma de los dos dados sea
+          7, la partida es ganada, sino es perdida. Para poder jugar al juego tienes que estar registrado.
+        </p>           
+			      <p>
                 Para registrar un jugador es imprescindible introducir el mail y un password de mínimo 8 
                 carácteres.
-                Cuando se registra un usuario sin nickname se le asigna el 
-                nickname Ánonimo y se le asigna el rol de user, con el que puede hacerlo todo menos borrar
-                las jugadas de un jugador, que solo puede hacerlo un admin.
+                Cuando se registra un usuario sin nickname se le asigna el nickname Ánonimo y se le asigna 
+                el rol de user, con el que puede hacerlo todo menos borrar las jugadas de un jugador, que 
+                solo puede hacerlo un admin.
             </p>
             <p>
                 Para asignar el rol de admin se puede hacer desde postman o desde phpMyAdmin.
